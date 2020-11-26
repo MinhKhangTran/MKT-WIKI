@@ -8,9 +8,9 @@ module.exports = {
   siteMetadata: {
     title: `MKT WIKI`,
     description: `Gatsby Airtable Example. Built using Airtable, Algolia Search, Gatsby Background Image plugin and  React Context API. Containts two sliders, real-time Airtable updates and submenus. Styled using Styled-Components. `,
-    author: `@johnsmilga`,
+    author: `@mkt`,
     titleTemplate: `%s | MKT WIKI`,
-    url: `https://gatsby-airtable-design-project.netlify.app/`,
+    url: `https://mkt-wiki.netlify.app/`,
     image: `mainBcg.png`,
     twitterUsername: `@john_smilga`,
   },
