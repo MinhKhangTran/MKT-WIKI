@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <div className="text-center">
+    <div className="text-center my-4">
       <h1>
         Made by MKT with <span className="gatsby">Gatsby</span>.Hosted on{" "}
         <span className="netlify">Netlify</span>

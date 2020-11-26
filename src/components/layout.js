@@ -2,8 +2,15 @@ import React from "react"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
+const getToggleMode = () => {
+  let toggle = false
+  if (localStorage.getItem("toggle")) {
+    toggle = JSON.parse(localStorage.getItem("toggle"))
+  }
+  return toggle
+}
 const Layout = ({ children }) => {
-  const [toggle, setToggle] = React.useState(false)
+  const [toggle, setToggle] = React.useState(getToggleMode())
   const setMode = () => {
     setToggle(!toggle)
   }
@@ -14,6 +21,9 @@ const Layout = ({ children }) => {
     } else {
       document.documentElement.className = ""
     }
+  }, [toggle])
+  React.useEffect(() => {
+    localStorage.setItem("toggle", toggle)
   }, [toggle])
   return (
     <>
