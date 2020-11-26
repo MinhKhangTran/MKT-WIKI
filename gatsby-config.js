@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -41,24 +42,18 @@ module.exports = {
       },
     },
     // {
-    //   resolve: `gatsby-source-airtable`,
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
-    //     apiKey: process.env.GATSBY_AIRTABLE_API,
-    //     concurrency: 5,
-    //     tables: [
+    //     fonts: [
     //       {
-    //         baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-    //         tableName: `Projects`,
-    //         mapping: { image: `fileNode` },
+    //         family: `Roboto`,
+    //         variants: [`400`, `500`, `700`],
     //       },
     //       {
-    //         baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-    //         tableName: `Customers`,
-    //         mapping: { image: `fileNode` },
+    //         family: `Open Sans`,
     //       },
     //     ],
     //   },
     // },
-    ,
   ],
 }
