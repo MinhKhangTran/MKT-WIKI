@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+
+.breite {
+  @apply w-11/12 md:w-10/12 mx-auto;
+}
+
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
+
+body {
+  font-family: "Reem Kufi", sans-serif;
+  background: #f8fafc;
+  /* background: #334155; */
+}
+
+.netlify {
+  color: #00ad9f;
+}
+.gatsby {
+  color: #362066;
+}
