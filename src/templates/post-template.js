@@ -16,7 +16,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} image={image.childImageSharp.fluid.src} />
+      <SEO title={title} />
       <div className="breite">
         <Image className="mb-8" fluid={image.childImageSharp.fluid} />
 
