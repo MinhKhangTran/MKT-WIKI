@@ -9,7 +9,7 @@ const Error = () => {
       <SEO title="Error :(" />
       <div
         className="breite flex flex-col justify-center items-center"
-        style={{ height: "calc(100vh - 150px)" }}
+        style={{ height: "calc(100vh - 240px)" }}
       >
         <h1>Sorry diese Seite gibt es nicht</h1>
         <Link className="btn" to="/">
