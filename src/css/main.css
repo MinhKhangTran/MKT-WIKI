@@ -13,6 +13,18 @@
   @apply text-lime-500 dark:text-lime-200 text-xl tracking-wider;
 }
 
+.category {
+  @apply bg-lime-200 text-lime-600;
+}
+
+.btn {
+  @apply text-lime-600 dark:text-lime-300 text-lg transition-all duration-300 ease-in-out mt-6;
+}
+
+.btn:hover {
+  @apply text-lime-700 dark:text-lime-400 text-lg;
+}
+
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");

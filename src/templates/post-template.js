@@ -1,16 +1,29 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import Image from "gatsby-image"
+import { FaAngleDoubleLeft } from "react-icons/fa"
 
 const PostTemplate = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { slug },
+      frontmatter: { title, category, image, date },
+      body,
     },
   } = data
+
   return (
     <Layout>
-      <h1>{slug}</h1>
+      <div className="breite">
+        <Image className="mb-8" fluid={image.childImageSharp.fluid} />
+
+        <MDXRenderer>{body}</MDXRenderer>
+        <Link to="/" className="btn flex items-center">
+          <FaAngleDoubleLeft className="mr-2" />
+          Alle Beiträge
+        </Link>
+      </div>
     </Layout>
   )
 }
@@ -27,7 +40,7 @@ export const query = graphql`
         image {
           childImageSharp {
             fluid {
-              src
+              ...GatsbyImageSharpFluid
             }
           }
         }

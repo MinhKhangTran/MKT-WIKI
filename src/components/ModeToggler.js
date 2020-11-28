@@ -1,7 +1,9 @@
 import React from "react"
 import { FaSun, FaMoon } from "react-icons/fa"
+import { useGlobalContext } from "../context"
 
-const ModeToggler = ({ toggle, setMode }) => {
+const ModeToggler = () => {
+  const { toggle, setMode } = useGlobalContext()
   return (
     <div className="flex items-center space-x-2">
       <FaSun className="text-xl dark:text-gray-50" />
