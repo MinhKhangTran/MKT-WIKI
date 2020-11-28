@@ -5,12 +5,12 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `MKT WIKI`,
-    description: `Gatsby Airtable Example. Built using Airtable, Algolia Search, Gatsby Background Image plugin and  React Context API. Containts two sliders, real-time Airtable updates and submenus. Styled using Styled-Components. `,
+    description: `Mein persönlicher Blog. Inspiriert von John Smilga und Dan Abramov. Simple gehalten mit Dark mode, Reading Time, Gatsby und Tailwind. Gehostet von Netlify`,
     author: `@mkt`,
     titleTemplate: `%s | MKT WIKI`,
     url: `https://mkt-wiki.netlify.app/`,
-    image: `mainBcg.png`,
-    twitterUsername: `@john_smilga`,
+    image: `mainBcg.PNG`,
+    twitterUsername: ``,
   },
   plugins: [
     `gatsby-plugin-postcss`,

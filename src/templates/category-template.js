@@ -3,14 +3,20 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Posts from "../components/Posts"
 import { FaAngleDoubleLeft } from "react-icons/fa"
+import SEO from "../components/SEO"
 const CategoryTemplate = props => {
   const {
     allMdx: { nodes: categories },
   } = props.data
   // console.log(props.path.split("/")[1])
   // console.log(categories)
+  const categoryAsString = props.path.split("/")[1]
+  const categoryFirstLetterUppercase =
+    categoryAsString.charAt(0).toUpperCase() + categoryAsString.slice(1)
+  // console.log(categoryFirstLetterUppercase)
   return (
     <Layout>
+      <SEO title={categoryFirstLetterUppercase} />
       <div className="breite capitalize">
         <h1>{props.path.split("/")[1]}</h1>
       </div>

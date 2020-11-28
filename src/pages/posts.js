@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Posts from "../components/Posts"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 const PostsPage = ({ data }) => {
   const {
@@ -9,6 +10,7 @@ const PostsPage = ({ data }) => {
   } = data
   return (
     <Layout className="breite">
+      <SEO title="Posts" />
       <Posts posts={posts} title="Alle Beiträge" />
     </Layout>
   )

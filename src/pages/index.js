@@ -4,6 +4,7 @@ import AboutMe from "../components/AboutMe"
 import Posts from "../components/Posts"
 import Categories from "../components/Categories"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 export default function Home({ data }) {
   const {
@@ -11,6 +12,7 @@ export default function Home({ data }) {
   } = data
   return (
     <Layout>
+      <SEO title="Home" />
       <AboutMe />
       <Categories />
       <Posts posts={posts} />

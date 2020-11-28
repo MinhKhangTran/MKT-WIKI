@@ -4,17 +4,19 @@ import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Image from "gatsby-image"
 import { FaAngleDoubleLeft } from "react-icons/fa"
+import SEO from "../components/SEO"
 
 const PostTemplate = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { title, category, image, date },
+      frontmatter: { title, image },
       body,
     },
   } = data
 
   return (
     <Layout>
+      <SEO title={title} image={image.childImageSharp.fluid} />
       <div className="breite">
         <Image className="mb-8" fluid={image.childImageSharp.fluid} />
 
