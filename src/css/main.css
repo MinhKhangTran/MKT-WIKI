@@ -25,6 +25,9 @@
   @apply text-lime-700 dark:text-lime-400 text-lg;
 }
 
+.post-title {
+  @apply text-lime-600 dark:text-lime-300 text-2xl font-semibold mt-6 mb-2;
+}
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");

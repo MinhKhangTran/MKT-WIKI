@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import { FaGithub } from "react-icons/fa"
 
 const query = graphql`
   {

@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-remark-images`,
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,20 +38,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
-      },
-    },
-    {
-      resolve: `gatsby-source-airtable`,
-      options: {
-        apiKey: process.env.GATSBY_AIRTABLE_API, // may instead specify via env, see below
-        concurrency: 5, // default, see using markdown and attachments for more information
-        tables: [
-          {
-            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `About`,
-            mapping: { notes: `text/markdown`, image: `fileNode` }, // optional, e.g. "text/markdown", "fileNode"
-          },
-        ],
       },
     },
   ],

@@ -16,9 +16,9 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} image={image.childImageSharp.fluid.src} />
       <div className="breite">
-        <Image className="mb-8" fluid={image.childImageSharp.fluid} />
+        <Image fluid={image.childImageSharp.fluid} />
 
         <MDXRenderer>{body}</MDXRenderer>
         <Link to="/" className="btn flex items-center">
@@ -32,21 +32,20 @@ const PostTemplate = ({ data }) => {
 export const query = graphql`
   query GetSinglePost($slug: String) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
-      body
       frontmatter {
-        category
-        date(formatString: "MMM Do,YYYY")
-        readTime
-        slug
         title
+        category
+        date(formatString: "MMMM Do, YYYY")
         image {
           childImageSharp {
             fluid {
+              src
               ...GatsbyImageSharpFluid
             }
           }
         }
       }
+      body
     }
   }
 `
