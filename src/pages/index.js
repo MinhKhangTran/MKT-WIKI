@@ -22,7 +22,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }, skip: 1) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         id
         frontmatter {
