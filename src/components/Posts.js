@@ -23,7 +23,7 @@ const Posts = ({ posts, title }) => {
             </div>
             <div className="flex flex-col">
               <header className="flex justify-between">
-                <h1 className="title text-2xl tracking-wider font-semibold">
+                <h1 className="title text-2xl tracking-wider font-semibold capitalize">
                   {title}
                 </h1>
                 <Link to={`/${category}`}>
@@ -32,7 +32,7 @@ const Posts = ({ posts, title }) => {
                   </h1>
                 </Link>
               </header>
-              <footer className="subtitle flex text-base flex-grow  items-start space-x-2 ">
+              <footer className="subtitle flex text-base   items-start space-x-2 ">
                 <h1 className="">{date}</h1>
                 <span> &#183; </span>
                 <h1 className="flex items-center">
